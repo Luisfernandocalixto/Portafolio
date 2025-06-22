@@ -7,11 +7,12 @@
     <meta property="og:type" content="website">
     <meta property="og:title" content="Portafolio">
     <meta property="og:url" content="portafolio-zeta-silk.vercel.app/">
-    <meta property="og:image" content="./assets/img/espacio.webp">
+    <meta property="og:image" content="./assets/img/selection.svg">
     <meta property="og:description" content="Mostrando algunos de mis proyectos realizados!">
-    <link rel="shortcut icon" href="./assets/img/espacio.webp" type="image/x-icon">
-    <title>Portafolio</title>
+    <link rel="shortcut icon" href="./assets/img/selection.svg" type="image/x-icon">
+    <title>Portafolio - Luis Fernando</title>
     <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/modal.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -54,10 +55,10 @@
             <article class="hero_texts">
                 <h1 class="hero_title">Luis Fernando Peña Calixtro</h1>
                 <p class="hero_paragraph">
-                    Ingeniero en sistemas computacionales interesado en aportar mis conocimientos y poner
+                    Interesado en aportar mis conocimientos y poner
                     en práctica mis habilidades para el desarrollo de proyectos orientados al desarrollo de software.
                 </p>
-                <a href="#" class="hero_cta">Empieza ahora</a>
+                <a  class="hero_cta" href="#modal-full" uk-toggle>Ver CV</a>
             </article>
             <br>
             <figure class="hero_figure">
@@ -88,8 +89,7 @@
             <div class="learn_articles">
 
                 <article class="learn_article">
-                    <img src="/assets//image/view-recorte.webp" alt=""
-                        class="learn_img">
+                    <img src="/assets//image/view-recorte.webp" alt="" class="learn_img">
                     <h2 class="learn_title">Recorta imagenes</h2>
                     <p class="paragraph">Recorta imagenes de forma rápida y sencilla</p>
                     <div>
@@ -180,8 +180,7 @@
                 </article>
 
                 <article class="learn_article">
-                    <img src="/assets/image/view-escuela.webp"
-                        alt="" class="learn_img">
+                    <img src="/assets/image/view-escuela.webp" alt="" class="learn_img">
                     <h2 class="learn_title">Escuela</h2>
                     <p class="paragraph">Actividades escolares</p>
                     <div>
@@ -318,8 +317,7 @@
 
 
                 <article class="learn_article">
-                    <img src="/assets/image/view-articulos.webp"
-                        alt="" class="learn_img">
+                    <img src="/assets/image/view-articulos.webp" alt="" class="learn_img">
                     <h2 class="learn_title">Venta</h2>
                     <p class="paragraph">Compra y vende fácilmente artículos</p>
                     <div>
@@ -336,11 +334,11 @@
         <section class="learn container">
             <div class="learn_articles">
                 <article class="learn_article">
-                    <img src="./assets/image/view-chatsimple.webp" alt="" class="learn_img">
-                    <h2 class="learn_title">Simple conversación</h2>
-                    <p class="paragraph">Simulando una conversación con chatbot</p>
+                    <img src="./assets/image/view-libros.webp" alt="" class="learn_img">
+                    <h2 class="learn_title">Listado de libros</h2>
+                    <p class="paragraph">Encuentra el libro de tu agrado en la colleción de libros gratuitos</p>
                     <div>
-                        <a href="https://simple-conversacion.netlify.app" target="_blank" class="hero_cta">Visitar
+                        <a href="https://listado-libros.netlify.app/" target="_blank" class="hero_cta">Visitar
                             ahora</a>
                     </div>
 
@@ -383,6 +381,16 @@
                     <p class="paragraph">Mostrando interesantes curiosidades del Velociraptor</p>
                     <div>
                         <a href="https://velociraptor.netlify.app" target="_blank" class="hero_cta">Visitar ahora</a>
+                    </div>
+
+                </article>
+
+                <article class="learn_article">
+                    <img src="/assets/image/view-cuentos.webp" alt="" class="learn_img">
+                    <h2 class="learn_title">Cuentos</h2>
+                    <p class="paragraph">Mostrando cuentos infantiles</p>
+                    <div>
+                        <a href="https://ver-libros.netlify.app/" target="_blank" class="hero_cta">Visitar ahora</a>
                     </div>
 
                 </article>
@@ -436,6 +444,24 @@
                     </div>
                 </article>
 
+            </div>
+        </section>
+
+        <section class="learn container">
+
+            <div class="learn_articles">
+
+
+                <article class="learn_article">
+                    <img src="./assets/image/view-chatsimple.webp" alt="" class="learn_img">
+                    <h2 class="learn_title">Simple conversación</h2>
+                    <p class="paragraph">Simulando una conversación con chatbot</p>
+                    <div>
+                        <a href="https://simple-conversacion.netlify.app" target="_blank" class="hero_cta">Visitar
+                            ahora</a>
+                    </div>
+
+                </article>
             </div>
         </section>
 
@@ -515,8 +541,23 @@
 
 
 
+
+    <!-- modal -->
+    <div id="modal-full" class="uk-modal-full" uk-modal>
+        <div class="uk-modal-dialog">
+            <button class="uk-modal-close-full uk-close-large" type="button" uk-close></button>
+            <div class="uk-grid-collapse uk-child-width-1-2@s uk-flex-middle" uk-grid>
+                <embed src="/assets/pdf/CVME.pdf" class="uk-width-1-1"  type="" uk-height-viewport>
+            </div>
+        </div>
+    </div>
+    <!-- modal -->
+
+
     <!-- script -->
     <script src="./js/app.js"></script>
+    <script src="./js/modal.js"></script>
+    <!-- script -->
 </body>
 
 </html>

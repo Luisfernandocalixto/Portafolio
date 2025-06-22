@@ -14,7 +14,7 @@ body {
     font-family: 'Archivo', serif;
 }
 
-.logoHome{
+.logoHome {
     border-radius: 50%;
     -webkit-border-radius: 50%;
     -moz-border-radius: 50%;
@@ -235,7 +235,7 @@ body {
 
 .statics {
     background-image: linear-gradient(#19181bc0, #171719e3),
-        url(../assets/img/fondo.jpg);
+        url(../assets/img/fondo.webp);
     background-size: cover;
     background-position: center;
     color: #fff;
@@ -415,7 +415,7 @@ body {
     }
 
     /* learn */
-    
+
     .learn_articles {
         text-align: center;
         gap: 2rem;

@@ -11,5 +11,3 @@ links.forEach(function (link) {
         menuList.classList.remove("nav_list--show")
     })
 })
-
-
