@@ -5,13 +5,14 @@
 
 :root {
     scroll-behavior: smooth;
-    --orange: #ff9d71;
+    --orange: #9c1710;
     --blue: #5454d4;
     --background: #F9F8FE;
+    --isColor: var(--blue);
 }
 
 body {
-    font-family: 'Archivo', serif;
+    font-family: 'Archivo', system-ui;
 }
 
 .logoHome {
@@ -83,6 +84,29 @@ body {
 
 /* hero-main */
 
+
+.hero {
+    margin-bottom: 10px;
+}
+
+.content-social {
+
+    display: flex;
+    gap: 10px;
+    justify-content: start;
+    flex-wrap: wrap;
+}
+
+.content-post-social {
+
+    display: flex;
+    align-items: center;
+    place-content: center;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-top: 10px;
+}
+
 .hero-main {
     display: flex;
     flex-direction: column;
@@ -129,6 +153,53 @@ body {
 
     border-radius: 6px;
 }
+
+.hero_social {
+    background-color: var(--isColor, --blue);
+    color: #fff;
+    text-decoration: none;
+    justify-self: center;
+    gap: 10px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+
+}
+
+.btnIndicator {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    opacity: 0;
+
+    animation: enhance-button linear both;
+    animation-timeline: scroll(root block);
+    animation-range: 0 200px;
+    z-index: 1;
+}
+
+.buttonTransparent {
+    padding: 8px;
+    margin: 8px;
+    border-radius: 50%;
+    color: #fff;
+    cursor: pointer;
+    transition: all .95s ease-in-out;
+    -webkit-transition: all .95s ease-in-out;
+    -moz-transition: all .95s ease-in-out;
+    -ms-transition: all .95s ease-in-out;
+    -o-transition: all .95s ease-in-out;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+
+
+
 
 /* about */
 .about {
@@ -290,10 +361,12 @@ body {
     height: 50px;
     width: 50px;
     border-radius: 50%;
-    background-color: var(--color);
+    color: #fff;
+    background-color: var(--isColor, --blue);
+
 }
 
-.footer_item:nth-of-type(1) {
+/* .footer_item:nth-of-type(1) {
     --color: #1da1f2;
 }
 
@@ -305,7 +378,7 @@ body {
 .footer_item:nth-of-type(3) {
     --color: #ff0000;
 
-}
+} */
 
 .footer_img {
     width: 28px;
@@ -468,4 +541,30 @@ body {
 
 
 
+}
+
+
+@keyframes reveal {
+    from {
+        opacity: 0;
+        translate: 0 100px;
+        scale: .5;
+    }
+
+    to {
+        opacity: 1;
+        translate: 0 0;
+        scale: 1;
+
+    }
+}
+
+@keyframes enhance-button {
+    to {
+        background: var(--orange);
+        backdrop-filter: blur(5px);
+        font-size: 18px;
+        display: flex;
+        opacity: 1;
+    }
 }
