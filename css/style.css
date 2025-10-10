@@ -12,7 +12,7 @@
 }
 
 body {
-    font-family: 'Archivo', system-ui;
+    font-family:  Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
 .logoHome {
@@ -26,7 +26,7 @@ body {
 .container {
     width: 90%;
     max-width: 1200px;
-    overflow: hidden;
+    /* overflow: hidden; */
     margin: 0 auto;
     padding: 80px 0;
 }
@@ -71,6 +71,7 @@ body {
 }
 
 .nav_list--show {
+    z-index: 9;
     transform: translate(0);
 }
 
@@ -90,7 +91,7 @@ body {
 }
 
 .content-social {
-
+    z-index: 1;
     display: flex;
     gap: 10px;
     justify-content: start;
@@ -98,7 +99,7 @@ body {
 }
 
 .content-post-social {
-
+    z-index: -1;
     display: flex;
     align-items: center;
     place-content: center;
@@ -366,19 +367,6 @@ body {
 
 }
 
-/* .footer_item:nth-of-type(1) {
-    --color: #1da1f2;
-}
-
-.footer_item:nth-of-type(2) {
-    --color: #c32aa3;
-
-}
-
-.footer_item:nth-of-type(3) {
-    --color: #ff0000;
-
-} */
 
 .footer_img {
     width: 28px;
@@ -567,4 +555,19 @@ body {
         display: flex;
         opacity: 1;
     }
+}
+
+.scale {
+    z-index: 999;
+    transition-property: transform;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 150ms;
+}
+
+.scale:hover {
+    transform: translate(0, 0) rotate(0) skewX(0) skewY(0) scaleX(1.1) scaleY(1.1);
+}
+
+.showCV {
+    z-index: 1;
 }
